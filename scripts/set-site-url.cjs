@@ -1,0 +1,14 @@
+const fs = require('fs');
+const path = require('path');
+const input = process.argv[2];
+if (!input) throw new Error('Usage: npm run site-url -- https://your-site.example/path/');
+const base = new URL(input.endsWith('/') ? input : input + '/');
+if (!['https:', 'http:'].includes(base.protocol)) throw new Error('Use an HTTP(S) site URL.');
+const escape = value => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+const file = path.resolve(__dirname, '../index.html');
+let html = fs.readFileSync(file, 'utf8');
+html = html.replace(/<meta property="og:image" content="[^"]*"\/>/, '<meta property="og:image" content="' + escape(new URL('images/portfolio-share.png', base).href) + '"/>');
+html = html.replace(/<meta property="og:url"[^>]*>\s*|<link rel="canonical"[^>]*>\s*/g, '');
+html = html.replace('</head>', '<meta property="og:url" content="' + escape(base.href) + '"/><link rel="canonical" href="' + escape(base.href) + '"/></head>');
+fs.writeFileSync(file, html);
+console.log('Share and canonical URLs set to ' + base.href);

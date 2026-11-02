@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .skill-card { @apply p-space-md rounded-[28px] border; }
+  .project-action { @apply flex-1 py-space-sm rounded-full bg-gradient-to-r from-purple-600/30 to-purple-600/30 hover:from-purple-600 hover:to-purple-600 border border-purple-400/40 text-center text-white text-label-md transition-all; }
+  .social-action { @apply w-10 h-10 rounded-full bg-surface-card border border-purple-500/20 justify-center text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-purple-600 transition-all; }
+  .project-tag { @apply px-2.5 py-0.5 rounded-full bg-surface-container text-[11px] text-slate-200 border border-white/10; }
+  .section-title { @apply text-headline-lg-mobile sm:text-headline-lg text-white font-extrabold tracking-tight; }
+  .filter-chip { @apply px-space-md py-space-xs rounded-full text-label-md text-slate-300 hover:transition-all font-semibold; }
+  .carousel-arrow { @apply w-11 h-11 rounded-full bg-surface-card border border-purple-500/35 hover:border-purple-400 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-purple-600 justify-center transition-all active:scale-90; }
+  .toolkit-tag { @apply px-space-md py-space-xs rounded-full bg-surface-container text-slate-200 text-label-sm border border-white/10 hover:border-purple-400/40 transition-all; }
+  .contact-input { @apply w-full h-12 px-space-md rounded-full bg-surface-container border border-purple-500/25 text-white text-body-base placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all; }
+  .contact-action { @apply inline-flex gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container border border-white/10 hover:border-purple-400/50 hover:bg-purple-950/50 text-slate-200 hover:text-white text-label-md transition-all; }
+  .footer-social { @apply w-10 h-10 rounded-full bg-surface-container border border-white/10 hover:border-purple-400/50 justify-center text-slate-300 hover:text-white transition-all; }
+  .section-label { @apply inline-flex gap-space-xs px-space-md py-space-xs rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-label-sm; }
+  .hobby-tag { @apply px-space-md py-1 rounded-full bg-purple-950/60 border border-purple-400/35 text-purple-300 text-xs font-bold; }
+  .interest-label { @apply inline-flex gap-space-xs px-space-md py-space-xs rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 text-label-sm; }
+  .feature-icon { @apply p-3 rounded-2xl bg-purple-500/15 border border-purple-400/40 justify-center text-3xl group-hover:scale-110 transition-transform; }
+  .card-title { @apply text-headline-sm text-white group-hover:text-purple-300 font-bold transition-colors; }
+  .skill-heading { @apply text-label-sm text-purple-300/80 uppercase tracking-wider mb-space-sm block font-bold; }
+  .project-tag-accent { @apply px-2.5 py-0.5 rounded-full bg-purple-950/60 text-[11px] text-purple-200 border border-purple-500/25; }
+  .contact-icon { @apply w-11 h-11 rounded-full bg-gradient-to-tr from-purple-700 to-purple-600 border border-purple-300/40 justify-center text-white; }
+  .content-section { @apply w-full max-w-[1200px] mx-auto px-gutter-sm lg:px-gutter py-space-xl lg:py-margin; }
+  .contact-label { @apply text-label-sm text-purple-300 font-bold uppercase tracking-wider; }
+  .project-note { @apply text-xs px-2.5 py-0.5 rounded-full bg-amber-400/15 border border-amber-400/35 text-amber-300 font-bold; }
+  .section-heading { @apply flex-col md:flex-row md:items-end gap-space-md; }
+  .filter-list { @apply gap-space-xs p-1 rounded-full bg-surface-container-low border border-purple-500/25; }
+}
+
+@tailwind utilities;
